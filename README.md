@@ -116,4 +116,5 @@ RandX has been tested with the **Dieharder** statistical test suite (100+ tests)
 - Mean p-value: **0.4486** (ideal: 0.5)
 - P-values follow expected uniform distribution
 
-![p-value-dist](p-value-dist.png)
+<img width="993" height="767" alt="p-value-dist" src="https://github.com/user-attachments/assets/7069da07-bb9c-4b32-aaeb-c794b2a360cc" />
+
