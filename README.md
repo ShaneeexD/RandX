@@ -108,4 +108,12 @@ RandX combines:
 
 <img width="512" height="512" alt="random_noise" src="https://github.com/user-attachments/assets/d3d72d28-9c35-406f-84ee-d316021b90ca" />
 
+## Statistical Testing
 
+RandX has been tested with the **Dieharder** statistical test suite (100+ tests). Results show excellent randomness quality:
+
+- **15 passed, 4 weak, 0 failed** (from initial 19 tests)
+- Mean p-value: **0.4486** (ideal: 0.5)
+- P-values follow expected uniform distribution
+
+![p-value-dist](p-value-dist.png)

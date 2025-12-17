@@ -24,3 +24,11 @@ TrueRandom.java
 Random.java
 PatternDetector.java
 RandomNoiseImage.java
+
+# Test files
+*.bin
+NISTTests.java
+BigCrushTests.java
+GenerateTestData.java
+PValueGraph.java
+EntropyTest.java
