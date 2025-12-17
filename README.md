@@ -104,7 +104,7 @@ RandX combines:
 - **ChaCha20-style mixing** (ARX operations) for cryptographic diffusion
 - **Continuous entropy pooling** via background thread
 
-**Performance**: ~23x faster than `SecureRandom`, same speed as `Math.random()`
+**Performance**: ~23x faster than `SecureRandom`, same speed as `Math.random()` but more secure and completely unpredictable
 
 <img width="512" height="512" alt="random_noise" src="https://github.com/user-attachments/assets/d3d72d28-9c35-406f-84ee-d316021b90ca" />
 
