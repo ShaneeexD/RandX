@@ -113,11 +113,81 @@ RandX combines:
 
 ## Statistical Testing
 
-RandX has been tested with the **Dieharder** statistical test suite (100+ tests). Results show excellent randomness quality:
+RandX has been tested with the **Dieharder** statistical test suite. Results show excellent randomness quality:
 
-- **15 passed, 4 weak, 0 failed** (from initial 19 tests)
-- Mean p-value: **0.4486** (ideal: 0.5)
+- **55 passed, 6 weak, 1 failed** (62 tests)
+- Mean p-value: **0.5190** (ideal: 0.5)
 - P-values follow expected uniform distribution
 
 <img width="993" height="767" alt="p-value-dist" src="https://github.com/user-attachments/assets/7069da07-bb9c-4b32-aaeb-c794b2a360cc" />
+
+### Full Test Results
+
+<details>
+<summary>Click to expand Dieharder test results</summary>
+
+| Test Name | ntup | tsamples | psamples | p-value | Result |
+|-----------|------|----------|----------|---------|--------|
+| diehard_birthdays | 0 | 100 | 100 | 0.85303190 | ✅ PASSED |
+| diehard_operm5 | 0 | 1000000 | 100 | 0.01010227 | ✅ PASSED |
+| diehard_rank_32x32 | 0 | 40000 | 100 | 0.00471001 | ⚠️ WEAK |
+| diehard_rank_6x8 | 0 | 100000 | 100 | 0.18495518 | ✅ PASSED |
+| diehard_bitstream | 0 | 2097152 | 100 | 0.99986140 | ⚠️ WEAK |
+| diehard_opso | 0 | 2097152 | 100 | 0.07469798 | ✅ PASSED |
+| diehard_oqso | 0 | 2097152 | 100 | 0.24560981 | ✅ PASSED |
+| diehard_dna | 0 | 2097152 | 100 | 0.38591760 | ✅ PASSED |
+| diehard_count_1s_str | 0 | 256000 | 100 | 0.43909582 | ✅ PASSED |
+| diehard_count_1s_byt | 0 | 256000 | 100 | 0.00008660 | ⚠️ WEAK |
+| diehard_parking_lot | 0 | 12000 | 100 | 0.99777049 | ⚠️ WEAK |
+| diehard_2dsphere | 2 | 8000 | 100 | 0.70124356 | ✅ PASSED |
+| diehard_3dsphere | 3 | 4000 | 100 | 0.59941329 | ✅ PASSED |
+| diehard_squeeze | 0 | 100000 | 100 | 0.34280516 | ✅ PASSED |
+| diehard_sums | 0 | 100 | 100 | 0.58366092 | ✅ PASSED |
+| diehard_runs | 0 | 100000 | 100 | 0.89914599 | ✅ PASSED |
+| diehard_runs | 0 | 100000 | 100 | 0.73389410 | ✅ PASSED |
+| diehard_craps | 0 | 200000 | 100 | 0.02166256 | ✅ PASSED |
+| diehard_craps | 0 | 200000 | 100 | 0.44520204 | ✅ PASSED |
+| marsaglia_tsang_gcd | 0 | 10000000 | 100 | 0.00000000 | ❌ FAILED |
+| marsaglia_tsang_gcd | 0 | 10000000 | 100 | 0.00020699 | ⚠️ WEAK |
+| sts_monobit | 1 | 100000 | 100 | 0.84099232 | ✅ PASSED |
+| sts_runs | 2 | 100000 | 100 | 0.43772600 | ✅ PASSED |
+| sts_serial | 1 | 100000 | 100 | 0.88847368 | ✅ PASSED |
+| sts_serial | 2 | 100000 | 100 | 0.53602494 | ✅ PASSED |
+| sts_serial | 3 | 100000 | 100 | 0.11095856 | ✅ PASSED |
+| sts_serial | 3 | 100000 | 100 | 0.23666711 | ✅ PASSED |
+| sts_serial | 4 | 100000 | 100 | 0.48314433 | ✅ PASSED |
+| sts_serial | 4 | 100000 | 100 | 0.30526397 | ✅ PASSED |
+| sts_serial | 5 | 100000 | 100 | 0.94625343 | ✅ PASSED |
+| sts_serial | 5 | 100000 | 100 | 0.22344894 | ✅ PASSED |
+| sts_serial | 6 | 100000 | 100 | 0.50759382 | ✅ PASSED |
+| sts_serial | 6 | 100000 | 100 | 0.62311655 | ✅ PASSED |
+| sts_serial | 7 | 100000 | 100 | 0.77754286 | ✅ PASSED |
+| sts_serial | 7 | 100000 | 100 | 0.38831338 | ✅ PASSED |
+| sts_serial | 8 | 100000 | 100 | 0.70810052 | ✅ PASSED |
+| sts_serial | 8 | 100000 | 100 | 0.78794335 | ✅ PASSED |
+| sts_serial | 9 | 100000 | 100 | 0.94231855 | ✅ PASSED |
+| sts_serial | 9 | 100000 | 100 | 0.93980387 | ✅ PASSED |
+| sts_serial | 10 | 100000 | 100 | 0.08437737 | ✅ PASSED |
+| sts_serial | 10 | 100000 | 100 | 0.10833821 | ✅ PASSED |
+| sts_serial | 11 | 100000 | 100 | 0.38615644 | ✅ PASSED |
+| sts_serial | 11 | 100000 | 100 | 0.85348827 | ✅ PASSED |
+| sts_serial | 12 | 100000 | 100 | 0.82451496 | ✅ PASSED |
+| sts_serial | 12 | 100000 | 100 | 0.73680045 | ✅ PASSED |
+| sts_serial | 13 | 100000 | 100 | 0.92643090 | ✅ PASSED |
+| sts_serial | 13 | 100000 | 100 | 0.79648087 | ✅ PASSED |
+| sts_serial | 14 | 100000 | 100 | 0.75478426 | ✅ PASSED |
+| sts_serial | 14 | 100000 | 100 | 0.80748464 | ✅ PASSED |
+| sts_serial | 15 | 100000 | 100 | 0.28286554 | ✅ PASSED |
+| sts_serial | 15 | 100000 | 100 | 0.11353190 | ✅ PASSED |
+| sts_serial | 16 | 100000 | 100 | 0.99340160 | ✅ PASSED |
+| sts_serial | 16 | 100000 | 100 | 0.16914373 | ✅ PASSED |
+| rgb_bitdist | 1 | 100000 | 100 | 0.30214369 | ✅ PASSED |
+| rgb_bitdist | 2 | 100000 | 100 | 0.57740365 | ✅ PASSED |
+| rgb_bitdist | 3 | 100000 | 100 | 0.68306711 | ✅ PASSED |
+| rgb_bitdist | 4 | 100000 | 100 | 0.93347239 | ✅ PASSED |
+| rgb_bitdist | 5 | 100000 | 100 | 0.57207805 | ✅ PASSED |
+| rgb_bitdist | 6 | 100000 | 100 | 0.69125374 | ✅ PASSED |
+| rgb_bitdist | 7 | 100000 | 100 | 0.33875916 | ✅ PASSED |
+
+</details>
 
