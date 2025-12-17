@@ -105,3 +105,7 @@ RandX combines:
 - **Continuous entropy pooling** via background thread
 
 **Performance**: ~23x faster than `SecureRandom`, same speed as `Math.random()`
+
+<img width="512" height="512" alt="random_noise" src="https://github.com/user-attachments/assets/d3d72d28-9c35-406f-84ee-d316021b90ca" />
+
+
