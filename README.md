@@ -3,6 +3,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Sponsor](https://img.shields.io/badge/Sponsor-❤-red)](https://github.com/sponsors/ShaneeexD)
 
+> **The secure-enough RNG**: When `Math.random()` is too predictable, but `SecureRandom` is too slow.
+> Fast, hardware-entropy-backed randomness for games, simulations, and systems that need unpredictability without cryptographic overhead.
+
 A high-speed, cryptographically-inspired random number generator for Java.
 
 ## Installation
@@ -100,6 +103,32 @@ public class Example {
 | `RandX.refresh()` | Force entropy refresh |
 | `RandX.shutdown()` | Stop background entropy collector |
 
+## When to Use RandX
+
+### ✅ Perfect for:
+- **Gaming** - Loot drops, procedural generation, matchmaking (prevent players from predicting/exploiting RNG)
+- **Simulations** - Monte Carlo, financial modeling (where reproducibility isn't needed)
+- **Load testing** - Generating realistic unpredictable traffic patterns
+- **Session/Request IDs** - Non-sensitive but should be hard to guess
+- **A/B testing** - User bucketing where you don't want patterns
+- **Game server anti-cheat** - Unpredictable spawns, timings (harder to bot)
+
+### ⚠️ Use SecureRandom instead for:
+- Cryptographic key generation
+- Password generation
+- Authentication tokens
+- Payment processing
+- Anything where security compromise = serious consequences
+
+### 📊 Comparison
+
+| Feature | Math.random() | RandX | SecureRandom |
+|---------|--------------|-------|--------------|
+| Speed | ⚡⚡⚡ Fast | ⚡⚡⚡ Fast | 🐌 Slow (23x) |
+| Predictability | ❌ Easily predicted | ✅ Hard to predict | ✅ Cryptographically secure |
+| State visible | ❌ Yes (seed-based) | ✅ No (entropy pooling) | ✅ No |
+| Use case | Simple random values | Game logic, simulations | Security tokens |
+
 ## How It Works
 
 RandX combines:
@@ -108,6 +137,27 @@ RandX combines:
 - **Continuous entropy pooling** via background thread
 
 **Performance**: ~23x faster than `SecureRandom`, same speed as `Math.random()` but more secure and completely unpredictable
+
+## Why RandX is Hard to Predict
+
+Unlike `Math.random()` which uses a simple LCG (Linear Congruential Generator) with a visible 48-bit seed, RandX:
+
+1. **Continuously pools hardware entropy** from timing jitter, memory allocation, thread scheduling
+2. **Uses ChaCha20-style ARX mixing** (Add-Rotate-XOR) for cryptographic diffusion
+3. **Has no exposed seed state** - internal state is constantly refreshed
+4. **Combines multiple entropy sources** - impossible to control all variables
+
+**Result**: Even if an attacker observes millions of outputs, they cannot reverse-engineer the internal state, predict future values, or reproduce the sequence.
+
+## Design Philosophy
+
+RandX combines proven techniques from cryptographic and systems-level RNGs into a fast, practical solution for Java:
+
+- **ChaCha20-inspired mixing**: Uses ARX operations similar to the widely-studied ChaCha20 cipher for excellent diffusion
+- **Continuous entropy pooling**: Background thread constantly harvests hardware entropy (inspired by Linux kernel's approach)
+- **Userspace implementation**: Brings kernel-level techniques to Java applications without syscall overhead
+
+This isn't a new algorithm, it's a thoughtful combination of established techniques optimized for the "secure-enough" use case.
 
 <img width="512" height="512" alt="random_noise" src="https://github.com/user-attachments/assets/d3d72d28-9c35-406f-84ee-d316021b90ca" />
 
