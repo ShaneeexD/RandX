@@ -165,7 +165,7 @@ This isn't a new algorithm, it's a thoughtful combination of established techniq
 
 RandX has been tested with the **Dieharder** statistical test suite (v3.31.1) using a 7GB sample file. Results show excellent randomness quality:
 
-- **114 passed, 0 weak, 0 failed** (complete test suite)
+- **110 passed, 0 weak, 0 failed** (complete test suite)
 - Mean p-value: **0.53** (ideal: 0.5)
 - P-values follow expected uniform distribution
 - All tests passed including the notoriously difficult `marsaglia_tsang_gcd`
