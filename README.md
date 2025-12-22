@@ -170,7 +170,7 @@ RandX has been tested with the **Dieharder** statistical test suite (v3.31.1) us
 - P-values follow expected uniform distribution
 - All tests passed including the notoriously difficult `marsaglia_tsang_gcd`
 
-<img width="800" height="600" alt="pvalue_distribution" src="https://github.com/user-attachments/assets/81206940-86d0-4371-8178-a10928b130b8" />
+<img width="800" height="600" alt="pvalue_distribution" src="https://github.com/user-attachments/assets/e7b9260d-5206-462b-bfe6-97bfcb671c5a" />
 
 ### Full Test Results
 
