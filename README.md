@@ -154,6 +154,8 @@ public class Example {
 | State visible | ❌ Yes (seed-based) | ✅ No (entropy pooling) | ✅ No |
 | Use case | Simple random values | Game logic, simulations | Security tokens |
 
+<img width="345" height="277" alt="image" src="https://github.com/user-attachments/assets/eb7bb6c4-133f-4be9-b0e9-47a6651ddbd3" />
+
 ## How It Works
 
 RandX combines:
