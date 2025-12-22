@@ -149,7 +149,7 @@ public class Example {
 
 | Feature | Math.random() | RandX | SecureRandom |
 |---------|--------------|-------|--------------|
-| Speed | ⚡⚡⚡ Fast | ⚡⚡⚡ Fast | 🐌 Slow (23x) |
+| Speed | ⚡⚡⚡ Fast (19ms) | ⚡⚡⚡ Fast (20ms) | 🐌 Slow (23x, 466ms) |
 | Predictability | ❌ Easily predicted | ✅ Hard to predict | ✅ Cryptographically secure |
 | State visible | ❌ Yes (seed-based) | ✅ No (entropy pooling) | ✅ No |
 | Use case | Simple random values | Game logic, simulations | Security tokens |
