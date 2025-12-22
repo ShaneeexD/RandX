@@ -33,7 +33,7 @@ Add the dependency:
 <dependency>
     <groupId>com.github.ShaneeexD</groupId>
     <artifactId>RandX</artifactId>
-    <version>v1.0.0</version>
+    <version>v1.0.1</version>
 </dependency>
 ```
 
@@ -45,7 +45,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.ShaneeexD:RandX:v1.0.0'
+    implementation 'com.github.ShaneeexD:RandX:v1.0.1'
 }
 ```
 
