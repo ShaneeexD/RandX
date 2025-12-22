@@ -145,7 +145,7 @@ public class Example {
 - Payment processing
 - Anything where security compromise = serious consequences
 
-### 📊 Comparison
+### Comparison
 
 | Feature | Math.random() | RandX | SecureRandom |
 |---------|--------------|-------|--------------|
