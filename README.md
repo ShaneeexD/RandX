@@ -165,9 +165,10 @@ This isn't a new algorithm, it's a thoughtful combination of established techniq
 
 RandX has been tested with the **Dieharder** statistical test suite (v3.31.1) using a 7GB sample file. Results show excellent randomness quality:
 
-- **100 passed, 0 weak, 0 failed** (100 tests so far, test in progress)
-- Mean p-value: **0.54** (ideal: 0.5)
+- **114 passed, 0 weak, 0 failed** (complete test suite)
+- Mean p-value: **0.53** (ideal: 0.5)
 - P-values follow expected uniform distribution
+- All tests passed including the notoriously difficult `marsaglia_tsang_gcd`
 
 <img width="800" height="600" alt="pvalue_distribution" src="https://github.com/user-attachments/assets/81206940-86d0-4371-8178-a10928b130b8" />
 
@@ -279,6 +280,15 @@ RandX has been tested with the **Dieharder** statistical test suite (v3.31.1) us
 | rgb_lagged_sum | 25 | 1000000 | 100 | 0.28895131 | ✅ PASSED |
 | rgb_lagged_sum | 26 | 1000000 | 100 | 0.26763854 | ✅ PASSED |
 | rgb_lagged_sum | 27 | 1000000 | 100 | 0.72679682 | ✅ PASSED |
+| rgb_lagged_sum | 28 | 1000000 | 100 | 0.31922067 | ✅ PASSED |
+| rgb_kstest_test | 0 | 10000 | 1000 | 0.41413952 | ✅ PASSED |
+| dab_bytedistrib | 0 | 51200000 | 1 | 0.75602076 | ✅ PASSED |
+| dab_dct | 256 | 50000 | 1 | 0.82896519 | ✅ PASSED |
+| dab_filltree | 32 | 15000000 | 1 | 0.13901082 | ✅ PASSED |
+| dab_filltree | 32 | 15000000 | 1 | 0.31879860 | ✅ PASSED |
+| dab_filltree2 | 0 | 5000000 | 1 | 0.74077383 | ✅ PASSED |
+| dab_filltree2 | 1 | 5000000 | 1 | 0.15714842 | ✅ PASSED |
+| dab_monobit2 | 12 | 65000000 | 1 | 0.58893901 | ✅ PASSED |
 
 </details>
 
