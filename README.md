@@ -10,9 +10,50 @@ A high-speed, cryptographically-inspired random number generator for Java.
 
 ## Installation
 
-### Option 1: Add JAR to Classpath (Simplest)
+### Maven / Gradle (via JitPack)
 
-1. Copy `randx.jar` to your project's `lib` folder
+[![](https://jitpack.io/v/ShaneeexD/RandX.svg)](https://jitpack.io/#ShaneeexD/RandX)
+
+**Maven:**
+
+Add the JitPack repository to your `pom.xml`:
+
+```xml
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+
+Add the dependency:
+
+```xml
+<dependency>
+    <groupId>com.github.ShaneeexD</groupId>
+    <artifactId>RandX</artifactId>
+    <version>v1.0.0</version>
+</dependency>
+```
+
+**Gradle:**
+
+```groovy
+repositories {
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'com.github.ShaneeexD:RandX:v1.0.0'
+}
+```
+
+### Manual Installation
+
+**Option 1: Add JAR to Classpath**
+
+1. Download `randx.jar` from [Releases](https://github.com/ShaneeexD/RandX/releases)
 2. Add to classpath when compiling/running:
 
 ```bash
@@ -23,23 +64,7 @@ javac -cp lib/randx.jar YourClass.java
 java -cp .;lib/randx.jar YourClass
 ```
 
-### Option 2: Install to Local Maven Repository
-
-```bash
-mvn install:install-file -Dfile=randx.jar -DgroupId=com.randx -DartifactId=randx -Dversion=1.0.0 -Dpackaging=jar
-```
-
-Then add to your `pom.xml`:
-
-```xml
-<dependency>
-    <groupId>com.randx</groupId>
-    <artifactId>randx</artifactId>
-    <version>1.0.0</version>
-</dependency>
-```
-
-### Option 3: Add JAR to IDE
+**Option 2: Add JAR to IDE**
 
 **IntelliJ IDEA:**
 1. File → Project Structure → Libraries
